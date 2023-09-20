@@ -127,12 +127,12 @@ a {
 }
 
 .nav__list {
+    max-width: 100%;
     display: flex;
-    gap: 43px;
 }
 
 .nav__item {
-
+    padding: 8px 21px;
 }
 
 .nav__link {
@@ -143,7 +143,17 @@ a {
 }
 
 .header-hero {
+    position: relative;
     margin-top: 44px;
+}
+
+
+.header::after {
+    position: absolute;
+    content: url(../images/hero-deco-02.svg);
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .hero__media {
@@ -167,13 +177,6 @@ a {
 
 .hero__content {
     position: relative;
-}
-
-.hero__content::after {
-    position: absolute;
-    content: url(../images/hero-deco-02.svg);
-    bottom: 0;
-    right: -200px;
 }
 
 .hero__heading {
@@ -612,17 +615,19 @@ a {
 }
 
 .testimonials::before{
+    display: block;
     position: absolute;
     content: url(../icons/testimonal-deco-left.svg);
-    bottom: 0;
+    bottom: -3px;
     left: 0;
 }
 
 .testimonials::after{
+    display: block;
     position: absolute;
     content: url(../icons/testimonal-deco-right.svg);
     right: 0;
-    bottom: 0;
+    bottom: -3px;
 }
 
 .testimonials__list{
@@ -679,11 +684,13 @@ a {
     height: 40px;
     border-radius: 50%;
     background-color: #F29764;
-    background-image: url(../images/testimonial-icon-01.png);
-    background-size: cover;
-    background-position: center 6px;
-    background-repeat: no-repeat;
     overflow: hidden;
+}
+
+.people__info--img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .people__info--name {
@@ -738,7 +745,8 @@ a {
 
 /* Faq */
 .faq {
-    margin-top: 95px;
+    background-color: #fff;
+    padding-top: 95px;
 }
 
 .faq__heading {
@@ -752,13 +760,14 @@ a {
 }
 
 .faq__item {
+    display: flex;
+    justify-content: space-between;
     padding: 0 0 11px 22px;
     border-bottom: 2px solid #08182F;
 }
 
-.faq__item--inner {
-    display: flex;
-    justify-content: space-between;
+.faq__item + .faq__item {
+    margin-top: 60px;
 }
 
 .faq__item--question {
@@ -770,17 +779,154 @@ a {
 }
 
 .faq__item--cta {
-    display: block;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid ;
+    border: 2px solid #d0d1d2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.faq__item--answer {
+.faq__item--cta i {
+    color: #080415;
+}
 
-    /* display: none; */
+.faq__item--answer {
+    transition: scale 5s;
+    max-width: 487px;
+    margin-top: 23px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #51586A;
+    display: none;
+}
+
+.faq__item.active {
+    padding-bottom: 21px;
+    border-color: var(--primary-color);
+}
+
+.faq__item.active > .faq__item--cta i {
+    color: var(--primary-color);
+}
+
+.faq__item.active > .faq__item--cta {
+    margin-top: 22px;
+    border-color: #e1dafc;
+}
+
+.faq__item.active > .faq__item--content > .faq__item--question {
+    color: var(--primary-color);
+}
+
+.faq__item.active > .faq__item--content > .faq__item--answer {
+    display: block;
+}
+
+/* interactive */
+.interaction {
+    background-color: #fff;
+    padding-top: 160px;
+}
+
+.interaction__heading {
+    text-align: center;
+    letter-spacing: -2.24px;
+}
+
+.interaction__desc,
+.interaction__link {
+    display: block;
+    margin: 0 auto;
+    max-width: 528px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.interaction__link {
+    color: var(--primary-color);
+    margin-top: 30px;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
+    text-decoration-line: underline;
+}
+
+.interaction__list {
+    margin-top: 70px;
+}
+
+.interaction__img {
+    max-width: 100%;
+    height: 529px;
+    object-fit: cover;
+}
+
+/* action */
+.action {
+    background-color: #fff;
+    padding-top: 140px;
+}
+
+.action__container {
+    width: 1330px;
+}
+
+.action__inner {
+    padding: 60px 0;
+    background-color: #FBFAFF;
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action__desc {
+    max-width: 474px;
+    text-align: center;
+}
+
+.action__cta {
+    margin-top: 20px;
+}
+
+/* footer */
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #fff;
+}
+
+.footer__container {
+    max-width: 1430px;
+    margin: 0 auto 18px;
+    border-bottom: 1px solid #e0dfe3;
+    padding-bottom: 32px;
+}
+
+
+.footer__container > .container {
+    width: 1330px;
+}
+
+.footer__inner {
+    padding: 0
+}
+
+.footer__logo {
+    background-color: #fff;
+}
+
+.license__left,.license__right {
+    color: #525771;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.license__inner {
+    display: flex;
+    justify-content: space-between;
 }
