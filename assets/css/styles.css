@@ -158,15 +158,9 @@ a {
 
 .hero__media {
     position: relative;
-}
-
-.hero__media::after {
-    position: absolute;
-    content: url(../images/hero-deco-01.svg);
-    top: -80px;
-    left: -200px;
-    z-index: -1;
-    overflow: hidden;
+    background-image: url(../images/hero-deco-01.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .hero__media--img {
@@ -333,10 +327,9 @@ a {
 }
 
 .services__desc {
-    margin-top: 20px;
     max-width: 534px;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 .services__list {

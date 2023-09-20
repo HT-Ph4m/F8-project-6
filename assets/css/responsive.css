@@ -44,7 +44,46 @@
     .hero__desc {
         max-width: 80%;
     }
-}
+
+    .hero__follow-me {
+        margin-top: 25px;
+    }
+
+    .hero__media {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+    }
+
+    .company__row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch__heading {
+        margin: 5px 0 0;
+        text-align: center;
+    }
+
+    .branch__list {
+        margin-top: 52px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .branch__list--item {
+        justify-content: center;
+    }
+
+    .services__list {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .services__item {
+        width: 100%;
+    }
 
 /* Tablet breakpoint */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
