@@ -15,7 +15,7 @@
         line-height: 55px;
     }
 
-   .header::after {
+   .header-hero-inner::after {
         display: none;
     }
 

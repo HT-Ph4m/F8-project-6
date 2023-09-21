@@ -144,12 +144,15 @@ a {
 }
 
 .header-hero {
-    position: relative;
     margin-top: 44px;
 }
 
+.header-hero-inner {
+    position: relative;
+    max-width: calc(1600px - 44px);
+}
 
-.header::after {
+.header-hero-inner::after {
     position: absolute;
     content: url(../images/hero-deco-02.svg);
     bottom: 0;
