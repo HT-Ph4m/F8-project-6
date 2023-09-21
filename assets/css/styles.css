@@ -150,6 +150,7 @@ a {
 .header-hero-inner {
     position: relative;
     max-width: calc(1600px - 44px);
+    margin: 0 auto;
 }
 
 .header-hero-inner::after {
