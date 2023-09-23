@@ -129,12 +129,14 @@
     }
 
     .footer__inner > .header-top__nav {
+        border-bottom: none;
         margin-top: 20px;
         order: 2;
     }
     
 
     .footer__inner > .header-top__nav > .nav__list {
+        border-bottom: none;
         flex-wrap: wrap;
     }
 
@@ -179,7 +181,7 @@
         justify-content: center;
     }
 
-    .nav__item {
+    #mobile-nav > .nav__item {
         border-bottom: 1px solid rgba(12, 7, 32, 0.2);
     }
 
