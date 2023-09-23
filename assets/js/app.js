@@ -11,6 +11,7 @@ const pcNav = $("#pc-nav");
 const mobileNav = $("#mobile-nav");
 const overlay = $(".menu-overlay");
 const menuDrawer = $(".menu-drawer");
+const footerNav = $("#footer-nav");
 const mobileMenuItem = $("#mobile-nav");
 const toggleMenu = $(".toggle-menu");
 const logoInMenu = $(".menu-drawer a");
@@ -92,6 +93,7 @@ const app = {
 
     generateMenuMobile: function () {
         mobileNav.innerHTML = pcNav.innerHTML;
+        footerNav.innerHTML = pcNav.innerHTML;
     },
 
     toggleMenuMobile: function () {
